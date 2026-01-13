@@ -4,13 +4,14 @@
   "description": "Discord bot to track victory points in tabletop wargames",
   "repository": {
     "type": "git",
-    "url": "github-nottsknight:nottsknight/vp-tracker-bot"
+    "url": "https://github.com/nottsknight/vp-tracker-bot"
   },
   "license": "MIT",
   "author": "Nottsknight",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "build/src/index.js",
   "scripts": {
+    "dev": "tsx watch src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
     "clean": "gts clean",
@@ -21,9 +22,10 @@
     "posttest": "npm run lint"
   },
   "devDependencies": {
+    "@types/node": "^22.7.5",
     "gts": "^7.0.0",
-    "typescript": "^5.9.3",
-    "@types/node": "^22.7.5"
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "discord.js": "^14.25.1",
